@@ -29,8 +29,6 @@ export const LINKS = {
   give: "https://givebutter.com/hhc-tournament-day",
   directions:
     "https://www.google.com/maps/dir/?api=1&destination=Canebrake%20Club%2C%2023015%20Founders%20Cir%2C%20Athens%2C%20AL%2035613",
-  calendar:
-    "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Huntsville%20Hope%20Classic&dates=20260629T140000Z/20260629T210000Z&location=Canebrake%20Club%2C%2023015%20Founders%20Cir%2C%20Athens%2C%20AL%2035613&details=You're%20confirmed%20for%20the%20Huntsville%20Hope%20Classic%2C%20benefiting%20The%20One%20House%20Project.",
   instagram: "https://www.instagram.com/theonehouseproject/",
   facebook: "https://www.facebook.com/profile.php?id=61582913517584",
   youtube: "https://www.youtube.com/@theonehouseproject",
