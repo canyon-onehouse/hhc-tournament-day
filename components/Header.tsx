@@ -65,7 +65,6 @@ export function Header() {
     >
       <div
         style={{
-          position: "relative",
           maxWidth: 920,
           margin: "0 auto",
           padding: "0 18px",
@@ -73,12 +72,13 @@ export function Header() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          gap: 10,
         }}
       >
         <Link
           href="/"
           onClick={close}
-          style={{ textDecoration: "none", display: "flex", alignItems: "baseline", gap: 6 }}
+          style={{ textDecoration: "none", display: "flex", alignItems: "baseline", gap: 6, flex: "none" }}
         >
           <span style={{ fontFamily: F.display, fontSize: 18, color: C.cream, letterSpacing: ".3px" }}>
             Hope <em style={{ fontStyle: "italic", color: C.gold }}>Classic</em>
@@ -91,14 +91,11 @@ export function Header() {
           aria-expanded={menuOpen}
           className="hhx-tint-strong"
           style={{
-            position: "absolute",
-            left: "50%",
-            top: "50%",
-            transform: "translate(-50%,-50%)",
             display: "flex",
             alignItems: "center",
             gap: 8,
             height: 40,
+            minWidth: 0,
             padding: "0 12px 0 14px",
             border: "1px solid rgba(169,149,96,.6)",
             background: "transparent",
@@ -113,6 +110,8 @@ export function Header() {
               textTransform: "uppercase",
               color: C.cream,
               whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
           >
             {currentLabel}
@@ -127,6 +126,7 @@ export function Header() {
           style={{
             width: 40,
             height: 40,
+            flex: "none",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
