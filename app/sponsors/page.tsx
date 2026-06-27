@@ -44,10 +44,13 @@ export default function SponsorsPage() {
               <strong style={{ color: C.cream }}>Breakfast is on us.</strong>
             </div>
           </div>
-          <div style={{ marginTop: 14, border: `1px solid ${C.gold}`, padding: "16px 20px", display: "flex", alignItems: "center", gap: 14, background: "rgba(201,168,76,.08)" }}>
+          <div style={{ marginTop: 14, border: `1px solid ${C.gold}`, padding: "16px 20px", display: "flex", alignItems: "flex-start", gap: 14, background: "rgba(201,168,76,.08)" }}>
             <Icon name="warning" size={24} color={C.gold} style={{ flex: "none" }} />
             <div style={{ fontFamily: F.body, fontSize: 15, lineHeight: 1.5, color: "rgba(247,243,230,.9)" }}>
-              <strong style={{ color: C.cream }}>Last call is 9:30 AM.</strong> After 9:30 you&apos;ll walk your own setup out to your hole — no help once the field is staging for the 10:00 shotgun. Beat the clock.
+              <strong style={{ color: C.cream }}>Last call is 9:30 AM.</strong>
+              <span style={{ display: "block", marginTop: 4 }}>
+                After 9:30, our staff is focused on running the tournament, so we can&apos;t help at your hole.
+              </span>
             </div>
           </div>
         </div>
