@@ -7,7 +7,6 @@ import { CoreSections } from "@/components/CoreSections";
 const QUICK_ACTIONS: { href: string; label: string; icon: IconName; external?: boolean }[] = [
   { href: `tel:${CONTACTS.canyon.tel}`, label: "Call", icon: "phone-call" },
   { href: LINKS.directions, label: "Directions", icon: "navigation-arrow", external: true },
-  { href: LINKS.calendar, label: "Add to Calendar", icon: "calendar-plus", external: true },
 ];
 
 const ESSENTIALS = [

@@ -55,8 +55,8 @@ npm run lint
 All copy and data are ported verbatim from the prototype and live in typed,
 editable modules under `lib/`:
 
-- `lib/config.ts` — event facts, **all external links** (Givebutter, Google Maps,
-  Add-to-Calendar), phone numbers, socials. Change any URL/number here.
+- `lib/config.ts` — event facts, **all external links** (Givebutter, Google Maps),
+  phone numbers, socials. Change any URL/number here.
 - `lib/schedule.ts` — master schedule + per-audience arrival times + live-status logic
 - `lib/holes.ts` — the 18-hole reference table
 - `lib/sponsors.ts` — recognition wall by tier
