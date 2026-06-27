@@ -9,11 +9,11 @@ const QUICK_ACTIONS: { href: string; label: string; icon: IconName; external?: b
   { href: LINKS.directions, label: "Directions", icon: "navigation-arrow", external: true },
 ];
 
-const ESSENTIALS = [
-  { label: "Date", value: "Monday, June 29, 2026", borderBottom: true },
-  { label: "Location", value: "Canebrake Club", sub: EVENT.address, borderBottom: true, borderLeft: true },
+const ESSENTIALS: { label: string; value: string; sub?: string }[] = [
+  { label: "Date", value: "Monday, June 29, 2026" },
+  { label: "Location", value: "Canebrake Club", sub: EVENT.address },
   { label: "Format", value: "4-Person Scramble" },
-  { label: "Start", value: "10:00 AM Shotgun", borderLeft: true },
+  { label: "Start", value: "10:00 AM Shotgun" },
 ];
 
 const AUDIENCES = [
@@ -97,8 +97,7 @@ export default function HomePage() {
               maxWidth: 440,
             }}
           >
-            Here&apos;s your Monday — when to arrive, where to go, and who to call. Benefiting The One
-            House Project · Hosted by Bo Matthews.
+            Your guide to tournament day — when to arrive, where to go, and who to call.
           </p>
         </div>
       </section>
@@ -169,8 +168,10 @@ export default function HomePage() {
           <div
             style={{
               border: `1px solid ${C.border}`,
+              background: C.border,
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))",
+              gap: 1,
             }}
           >
             {ESSENTIALS.map((e) => (
@@ -178,8 +179,7 @@ export default function HomePage() {
                 key={e.label}
                 style={{
                   padding: "18px 20px",
-                  borderBottom: e.borderBottom ? `1px solid ${C.border}` : undefined,
-                  borderLeft: e.borderLeft ? `1px solid ${C.border}` : undefined,
+                  background: C.cream,
                 }}
               >
                 <div

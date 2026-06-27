@@ -18,19 +18,15 @@ export default function SpecialGuestsPage() {
           <p style={{ fontFamily: F.body, fontStyle: "italic", fontSize: 17, lineHeight: 1.55, color: "rgba(247,243,230,.85)", margin: "16px auto 0", maxWidth: 480 }}>
             Just show up ready to have fun — we&apos;ll take care of the rest.
           </p>
-          <div style={{ marginTop: 26, display: "inline-flex", flexWrap: "wrap", justifyContent: "center", gap: 14 }}>
-            <div style={{ border: `2px solid ${C.gold2}`, background: C.navy, padding: "16px 28px" }}>
-              <div style={miniLabel}>Please Arrive By</div>
-              <div style={miniValue}>9:00 AM</div>
+          <div style={arrivalBox}>
+            <div style={{ flex: "none" }}>
+              <div style={arrivalLabel}>Please Arrive By</div>
+              <div style={arrivalTime}>9:00 AM</div>
             </div>
-            <div style={{ border: "1px solid rgba(169,149,96,.5)", padding: "16px 28px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <div style={miniLabel}>It Costs You</div>
-              <div style={miniValue}>Nothing</div>
+            <div style={{ flex: 1, minWidth: 200, fontFamily: F.body, fontSize: 15, lineHeight: 1.55, color: "rgba(247,243,230,.85)", textAlign: "left" }}>
+              Registration and the range are open — grab a drink and settle in.
             </div>
           </div>
-          <p style={{ fontFamily: F.body, fontSize: 14, color: "rgba(247,243,230,.7)", margin: "18px auto 0", maxWidth: 420 }}>
-            Green fees, cart, lunch, and drinks are all covered. Mon, June 29 · Canebrake Club · 10:00 AM shotgun.
-          </p>
         </div>
       </section>
 
@@ -85,7 +81,19 @@ const eyebrow: React.CSSProperties = {
   color: C.gold,
 };
 
-const miniLabel: React.CSSProperties = {
+const arrivalBox: React.CSSProperties = {
+  position: "relative",
+  marginTop: 28,
+  border: `2px solid ${C.gold2}`,
+  background: C.navy,
+  padding: "24px 26px",
+  display: "flex",
+  flexWrap: "wrap",
+  alignItems: "center",
+  gap: 20,
+};
+
+const arrivalLabel: React.CSSProperties = {
   fontFamily: F.label,
   fontSize: 10,
   letterSpacing: "2px",
@@ -93,9 +101,9 @@ const miniLabel: React.CSSProperties = {
   color: C.gold,
 };
 
-const miniValue: React.CSSProperties = {
+const arrivalTime: React.CSSProperties = {
   fontFamily: F.display,
-  fontSize: 34,
+  fontSize: 42,
   color: C.cream,
   lineHeight: 1,
   marginTop: 4,
