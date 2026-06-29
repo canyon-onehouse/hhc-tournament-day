@@ -31,18 +31,18 @@ export default function SponsorsWallPage() {
           {/* Title */}
           <TierHeading label="Title Sponsor" margin="8px 0 14px" />
           <div style={{ maxWidth: 460, margin: "0 auto" }}>
-            <div style={{ position: "relative", border: `2px solid ${C.gold2}`, background: C.card, minHeight: 130, display: "flex", alignItems: "center", justifyContent: "center", padding: 24, textAlign: "center" }}>
+            <div style={{ position: "relative", border: `2px solid ${C.gold2}`, background: "#fff", minHeight: 130, display: "flex", alignItems: "center", justifyContent: "center", padding: "26px 30px", textAlign: "center" }}>
               <span style={{ position: "absolute", inset: -6, border: "1px solid rgba(169,149,96,.4)", pointerEvents: "none" }} />
-              <span style={{ fontFamily: F.body, fontWeight: 600, fontSize: 24, color: C.green }}>{TITLE_SPONSOR}</span>
+              <img src={TITLE_SPONSOR.logo} alt={TITLE_SPONSOR.name} style={{ maxWidth: "100%", maxHeight: 88, objectFit: "contain" }} />
             </div>
           </div>
 
           {/* Gold */}
           <TierHeading label="Gold Sponsors" margin="36px 0 14px" />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 12 }}>
-            {GOLD_SPONSORS.map((name) => (
-              <div key={name} style={{ border: `1px solid ${C.gold2}`, background: C.card, minHeight: 96, display: "flex", alignItems: "center", justifyContent: "center", padding: 18, textAlign: "center" }}>
-                <span style={{ fontFamily: F.body, fontWeight: 600, fontSize: 17, color: C.green }}>{name}</span>
+            {GOLD_SPONSORS.map((s) => (
+              <div key={s.name} style={{ border: `1px solid ${C.gold2}`, background: "#fff", height: 122, display: "flex", alignItems: "center", justifyContent: "center", padding: 20, textAlign: "center" }}>
+                <img src={s.logo} alt={s.name} style={{ maxWidth: "100%", maxHeight: 84, objectFit: "contain" }} />
               </div>
             ))}
           </div>
@@ -56,9 +56,14 @@ export default function SponsorsWallPage() {
                     {t.label}
                   </div>
                 </div>
-                <div style={{ border: `1px solid ${C.border}`, background: C.card, minHeight: 90, display: "flex", alignItems: "center", justifyContent: "center", padding: 16, textAlign: "center" }}>
-                  <span style={{ fontFamily: F.body, fontWeight: 600, fontSize: 16, color: C.green }}>{t.name}</span>
+                <div style={{ border: `1px solid ${C.border}`, background: "#fff", height: 96, display: "flex", alignItems: "center", justifyContent: "center", padding: 16, textAlign: "center" }}>
+                  <img src={t.logo} alt={t.name} style={{ maxWidth: "100%", maxHeight: 62, objectFit: "contain" }} />
                 </div>
+                {t.person && (
+                  <div style={{ textAlign: "center", marginTop: 8, fontFamily: F.body, fontStyle: "italic", fontSize: 13, color: C.gray }}>
+                    {t.person}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -66,9 +71,13 @@ export default function SponsorsWallPage() {
           {/* Hole sponsors */}
           <TierHeading label="Hole Sponsors" margin="40px 0 16px" />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: 8 }}>
-            {HOLE_SPONSORS.map((name) => (
-              <div key={name} style={{ border: `1px solid ${C.border}`, background: C.card, padding: "14px 12px", minHeight: 58, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
-                <span style={{ fontFamily: F.body, fontSize: 13, color: C.green }}>{name}</span>
+            {HOLE_SPONSORS.map((s) => (
+              <div key={s.name} style={{ border: `1px solid ${C.border}`, background: "#fff", padding: 12, height: 78, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+                {s.logo ? (
+                  <img src={s.logo} alt={s.name} style={{ maxWidth: "100%", maxHeight: 50, objectFit: "contain" }} />
+                ) : (
+                  <span style={{ fontFamily: F.body, fontWeight: 600, fontSize: 13, color: C.green }}>{s.name}</span>
+                )}
               </div>
             ))}
           </div>
