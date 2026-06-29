@@ -99,6 +99,37 @@ export default function HomePage() {
           >
             Your guide to tournament day — when to arrive, where to go, and who to call.
           </p>
+          <div style={{ marginTop: 34, display: "flex", flexDirection: "column", alignItems: "center", gap: 11 }}>
+            <span
+              style={{
+                fontFamily: F.label,
+                fontWeight: 500,
+                fontSize: 10,
+                letterSpacing: "2.5px",
+                textTransform: "uppercase",
+                color: C.gold,
+              }}
+            >
+              Title &amp; Presenting Sponsor
+            </span>
+            <Link
+              href="/sponsors-wall"
+              style={{
+                display: "inline-block",
+                maxWidth: "100%",
+                background: C.card,
+                border: `1px solid ${C.gold2}`,
+                padding: "12px 26px",
+                lineHeight: 0,
+              }}
+            >
+              <img
+                src="/sponsors/american-cabinets.webp"
+                alt={"American Cabinets — Title & Presenting Sponsor"}
+                style={{ display: "block", width: 300, maxWidth: "100%", height: "auto" }}
+              />
+            </Link>
+          </div>
         </div>
       </section>
 
